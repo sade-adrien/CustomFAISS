@@ -1,4 +1,3 @@
-embeddings_films.csv 
-embeddings_maths.csv
 *.csv
 *.txt
+*.npy

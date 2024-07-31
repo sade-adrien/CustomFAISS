@@ -27,5 +27,5 @@ for i in tqdm(range(0, len(data), batch_size)):
     sentence_embeddings = model_output.last_hidden_state[:, 0]
     sentence_embeddings = F.normalize(sentence_embeddings, p=2, dim=1)
    
-    with open(f'embeddings1M_{str(i // 100_000)}.txt','ab') as file:
+    with open(f'../data/embeddings1M_{str(i // 100_000)}.txt','ab') as file:
         np.savetxt(file, sentence_embeddings.cpu(), delimiter=' ', fmt='%.16f')
